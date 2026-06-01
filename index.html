@@ -4,11 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Web Developer Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="D:/Abdullah/assets/css/style.css">
-    <link rel="icon" type="image/png" href="D:/Abdullah/assets/image/logo1.png">
+    <link rel="icon" type="image/png" href="logo1.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px !important;
+    box-sizing: border-box;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .logo_Abdulah{
+        max-width: 180px;
+    }
+    .designarena_image_hdfi0las{
+        max-width: 500px;
+    }
+    .captcha-spinner {
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #0066ff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 0.8s linear infinite;
+    }
+    .Abdullah{
+        font-size: 65px;
+        font-weight: 600;
+        color: white;
+        line-height: 37px;
+        padding-top: 15px;
+    }
+    .DEVELOPER{
+        color: #0066FF;
+        font-size: 45px;
+        font-weight: 500;
+        margin: 0px;
+    }
+    .responsive{
+        max-width: 430px;
+        padding: 12px 0px;
+    }
+    .About{
+        font-size: 25px;
+        font-weight: 300;
+        color: #0066FF;
+    }
+    .laptop{
+        border-radius: 20px;
+        border: 2px solid #565656;
+    }
+    .passionate{
+        font-size: 14px;
+        max-width: 440px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: #d0d0d0;
+    }
+    .functional{
+        padding: 12px 0px;
+        line-height: 25px;
+    }
+    .skills{
+        font-size: 14px;
+        color: white;
+    }
+    .quote{
+        transform: rotate(180deg);
+        font-size: 23px;
+    }
+    .review{
+        font-size: 13px;
+    }
+    .review_image{
+        max-width: 60px;
+    }
+    .review_name{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .work_text{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .image-box{
+        height:350px;
+        width:100%;
+        overflow:hidden;
+    }
+    .Digital_Agency_Website{
+        width:100%;
+        height:1095px;
+        object-fit:cover;
+        transition:transform 5s ease;
+    }
+    .image-box:hover .Digital_Agency_Website{
+        transform:translateY(-600px);
+    }
+    .E-commerce{
+        width:100%;
+        height:950px;
+        object-fit:cover;
+        transition:transform 5s ease;
+    }
+    .image-box:hover .E-commerce{
+        transform:translateY(-600px);
+    }
+    .Portfolio{
+        width:100%;
+        height:950px;
+        object-fit:cover;
+        transition:transform 5s ease;
+    }
+    .image-box:hover .Portfolio{
+        transform:translateY(-600px);
+    }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -29,7 +143,7 @@
 
     <nav class="sticky top-0 z-40 bg-darkBg/90 backdrop-blur-md border-b border-gray-800 py-4 px-6 md:px-12 flex justify-between items-center">
         <div>
-            <img src="D:/Abdullah/assets/image/logo.png"class="logo_Abdulah">
+            <img src="logo.png"class="logo_Abdulah">
         </div>
         
         <div class="hidden md:flex gap-6 text-sm text-gray-300">
@@ -84,7 +198,7 @@
             </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center">
-            <img src="D:/Abdullah/assets/image/designarena_image_hdfi0las.png" class="designarena_image_hdfi0las">
+            <img src="designarena_image_hdfi0las.png" class="designarena_image_hdfi0las">
         </div>
     </section>
 
@@ -96,7 +210,7 @@
             </div>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2">
-                    <img src="D:/Abdullah/assets/image/laptop.jpg"class="laptop">
+                    <img src="laptop.jpg"class="laptop">
                 </div>
                 <div class="w-full md:w-1/2 space-y-5">
                     <p class="passionate">
@@ -191,7 +305,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
                 <div class="image-box">
-                    <img src="D:/Abdullah/assets/image/Digital_Agency_Website.png" class="Digital_Agency_Website">
+                    <img src="Digital_Agency_Website.png" class="Digital_Agency_Website">
                 </div>    
                 <div class="p-5">
                     <h3 class="font-bold text-base mb-1">Digital Agency Website</h3>
@@ -200,7 +314,7 @@
             </div>
             <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
                 <div class="image-box">
-                    <img src="D:/Abdullah/assets/image/E-commerce.png" class="E-commerce">
+                    <img src="E-commerce.png" class="E-commerce">
                 </div>    
                 <div class="p-5">
                     <h3 class="font-bold text-base mb-1">E-commerce</h3>
@@ -209,7 +323,7 @@
             </div>
             <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
                  <div class="image-box">
-                    <img src="D:/Abdullah/assets/image/Portfolio.png" class="Portfolio">
+                    <img src="Portfolio.png" class="Portfolio">
                 </div>   
                 <div class="p-5">
                     <h3 class="font-bold text-base mb-1">Portfolio Website</h3>
@@ -234,7 +348,7 @@
                         "Abdullah is an amazing developer! He delivered high quality work on time and exceeded my expectations."
                     </p>
                     <div class="flex items-center gap-3 mt-4 pt-3">
-                        <img src="D:/Abdullah/assets/image/Aiko-Sato.png" class="review_image">
+                        <img src="Aiko-Sato.png" class="review_image">
                         <div>
                             <h4 class="review_name">Ali Raza</h4>
                             <p class="text-[14px] text-gray-400">Business Owner</p>
@@ -247,7 +361,7 @@
                         "Great communication, fast delivery and excellent code quality. I will definitely work with him again."
                     </p>
                     <div class="flex items-center gap-3 mt-4 pt-5">
-                        <img src="D:/Abdullah/assets/image/hana.png" class="review_image">
+                        <img src="hana.png" class="review_image">
                         <div>
                             <h4 class="review_name">Sarah Khan</h4>
                             <p class="text-[14px] text-gray-400">Marketing Manager</p>
@@ -260,7 +374,7 @@
                         "He understood my requirements perfectly and built a responsive website for my business. Highly recommended!"
                     </p>
                     <div class="flex items-center gap-3 mt-4 pt-3">
-                        <img src="D:/Abdullah/assets/image/Nikolai-Ivanov.png" class="review_image">
+                        <img src="Nikolai-Ivanov.png" class="review_image">
                         <div>
                             <h4 class="review_name">Usman Ahmed</h4>
                             <p class="text-[14px] text-gray-400">Entrepreneur</p>
