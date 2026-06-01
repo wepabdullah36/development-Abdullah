@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Web Developer Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="D:/Abdullah/assets/css/style.css">
+    <link rel="icon" type="image/png" href="D:/Abdullah/assets/image/logo1.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#030712',
+                        cardBg: '#0b1329',
+                        accentBlue: '#0066ff',
+                        neonBlue: '#00d2ff',
+                        formGreen: '#a3e635'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased selection:bg-accentBlue selection:text-white">
+
+    <nav class="sticky top-0 z-40 bg-darkBg/90 backdrop-blur-md border-b border-gray-800 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div>
+            <img src="D:/Abdullah/assets/image/logo.png"class="logo_Abdulah">
+        </div>
+        
+        <div class="hidden md:flex gap-6 text-sm text-gray-300">
+            <a href="#home" class="hover:text-accentBlue transition">Home</a>
+            <a href="#about" class="hover:text-accentBlue transition">About</a>
+            <a href="#services" class="hover:text-accentBlue transition">Services</a>
+            <a href="#skills" class="hover:text-accentBlue transition">Skills</a>
+            <a href="#projects" class="hover:text-accentBlue transition">Projects</a>
+            <a href="#testimonials" class="hover:text-accentBlue transition">Testimonials</a>
+            <a href="#contact" class="hover:text-accentBlue transition">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button onclick="openModal()" class="bg-accentBlue hover:bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-semibold transition hidden md:block">Hire Me</button>
+            
+            <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white text-2xl md:hidden focus:outline-none">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-darkBg/95 backdrop-blur-lg border-b border-gray-800 flex flex-col p-6 gap-4 text-gray-300 text-center shadow-xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">About</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Services</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Skills</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Projects</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Testimonials</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-accentBlue py-1 border-b border-gray-900 transition">Contact</a>
+            <button onclick="toggleMobileMenu(); openModal();" class="bg-accentBlue hover:bg-blue-700 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition mt-2 w-full">Hire Me</button>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-[85vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-12 gap-12 max-w-7xl mx-auto">
+        <div class="w-full space-y-6 text-center md:text-left">
+            <h4 class="text-accentBlue font-medium text-lg">Hi, I'm</h4>
+            <h1 class="Abdullah">ABDULLAH</h1>
+            <h2 class="DEVELOPER">WEB DEVELOPER</h2>
+            <p class="responsive">
+                I build modern, responsive and high-performance websites that help businesses grow online. Clean code, creative design and client satisfaction are my top priorities.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                <button onclick="openModal()" class="bg-accentBlue hover:bg-blue-700 text-white px-10 py-3 rounded-md font-medium transition flex items-center gap-2">Hire Me <i class="fa-solid fa-arrow-right text-sm"></i></button>
+                <button onclick="downloadAndOpenCV(event)" class="border border-gray-600 hover:border-white text-white px-6 py-3 rounded-md font-medium transition flex items-center gap-2 cursor-pointer">
+                    Download CV <i class="fa-solid fa-download text-sm"></i>
+                </button>
+            </div>
+            <div class="flex justify-center md:justify-start gap-5 text-gray-400 text-xl pt-4">
+                <a href="https://www.linkedin.com/in/abdullah-web-developer-b3ba873a4/" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+            <img src="D:/Abdullah/assets/image/designarena_image_hdfi0las.png" class="designarena_image_hdfi0las">
+        </div>
+    </section>
+
+    <section id="about" class="bg-cardBg/30 py-20 px-6 md:px-20 border-y border-gray-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h4 class="About">About Me</h4>
+                <h2 class="text-2xl md:text-3xl font-bold mt-1 pb-5">Web Developer & Problem Solver</h2>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="D:/Abdullah/assets/image/laptop.jpg"class="laptop">
+                </div>
+                <div class="w-full md:w-1/2 space-y-5">
+                    <p class="passionate">
+                        I'm Abdullah, a passionate Web Developer with experience in building beautiful, functional and responsive websites. I love turning ideas into real world digital solutions.
+                    </p>
+                    <ul class="functional">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accentBlue"></i> Clean & Modern Code</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accentBlue"></i> Responsive & Mobile Friendly</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accentBlue"></i> Fast Loading & SEO Optimized</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accentBlue"></i> Client Satisfaction is My Priority</li>
+                    </ul>
+                    <button class="bg-accentBlue hover:bg-blue-700 px-6 py-2.5 rounded-md text-sm font-medium transition">More About Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h4 class="About">My Services</h4>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-5">
+            <div class="bg-cardBg border border-gray-800/60 p-6 rounded-xl hover:border-accentBlue/50 transition text-center md:text-center">
+                <i class="fa-solid fa-globe text-3xl text-accentBlue mb-4 block"></i>
+                <h3 class="font-bold text-lg mb-2">Web Development</h3>
+                <p class="skills">I build modern,responsive and fast websites using latest technologies</p>
+            </div>
+            <div class="bg-cardBg border border-gray-800/60 p-6 rounded-xl hover:border-accentBlue/50 transition text-center md:text-center">
+                <i class="fa-solid fa-desktop text-3xl text-accentBlue mb-4 block"></i>
+                <h3 class="font-bold text-lg mb-2">Frontend Development</h3>
+                <p class="skills">I create beautiful UI with HTML, CSS, JavaScript. Bootstrap, Taliwind CSS.</p>
+            </div>
+            <div class="bg-cardBg border border-gray-800/60 p-6 rounded-xl hover:border-accentBlue/50 transition text-center md:text-center">
+                <i class="fa-solid fa-code text-3xl text-accentBlue mb-4 block"></i>
+                <h3 class="font-bold text-lg mb-2">Backend Development</h3>
+                <p class="skills">I build Secure backend with PHP , MySQL and RESTful APIs.</p>
+            </div>
+            <div class="bg-cardBg border border-gray-800/60 p-6 rounded-xl hover:border-accentBlue/50 transition text-center md:text-center">
+                <i class="fa-solid fa-rocket text-3xl text-accentBlue mb-4 block"></i>
+                <h3 class="font-bold text-lg mb-2">SEO & Performance</h3>
+                <p class="skills">I optimize websites for speed, SEO and better performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-cardBg/30 py-20 px-6 md:px-20 border-y border-gray-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h4 class="About">My Skills</h4>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">HTML</span><span>95%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 95%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">MySQL</span><span>80%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 80%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">CSS</span><span>90%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 90%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">WordPress</span><span>92%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 92%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">JavaScript</span><span>85%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 85%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">Bootstrap</span><span>90%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 90%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">PHP</span><span>80%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 80%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1 font-medium"><span class="text-gray-300">Tailwind CSS</span><span>85%</span></div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden"><div class="bg-accentBlue h-full rounded-full" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h4 class="About">Recent Projects</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
+                <div class="image-box">
+                    <img src="D:/Abdullah/assets/image/Digital_Agency_Website.png" class="Digital_Agency_Website">
+                </div>    
+                <div class="p-5">
+                    <h3 class="font-bold text-base mb-1">Digital Agency Website</h3>
+                    <p class="text-gray-400 text-xs">HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
+                <div class="image-box">
+                    <img src="D:/Abdullah/assets/image/E-commerce.png" class="E-commerce">
+                </div>    
+                <div class="p-5">
+                    <h3 class="font-bold text-base mb-1">E-commerce</h3>
+                    <p class="text-gray-400 text-xs">WordPress, WooCommerce</p>
+                </div>
+            </div>
+            <div class="bg-cardBg border border-gray-800/80 rounded-xl overflow-hidden group">
+                 <div class="image-box">
+                    <img src="D:/Abdullah/assets/image/Portfolio.png" class="Portfolio">
+                </div>   
+                <div class="p-5">
+                    <h3 class="font-bold text-base mb-1">Portfolio Website</h3>
+                    <p class="text-gray-400 text-xs">HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-10 pt-5">
+            <button class="bg-accentBlue hover:bg-blue-700 text-white px-6 py-2.5 rounded-md text-sm font-medium transition">View All Projects</button>
+        </div>
+    </section>
+
+    <section id="testimonials" class="bg-cardBg/30 py-20 px-6 md:px-20 border-t border-gray-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h4 class="About">Testimonials</h4>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5">
+                <div class="bg-cardBg border border-gray-800/50 p-6 rounded-xl relative">
+                    <i class="quote fa-solid fa-quote-right"></i>
+                    <p class="review">
+                        "Abdullah is an amazing developer! He delivered high quality work on time and exceeded my expectations."
+                    </p>
+                    <div class="flex items-center gap-3 mt-4 pt-3">
+                        <img src="D:/Abdullah/assets/image/Aiko-Sato.png" class="review_image">
+                        <div>
+                            <h4 class="review_name">Ali Raza</h4>
+                            <p class="text-[14px] text-gray-400">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cardBg border border-gray-800/50 p-6 rounded-xl relative">
+                    <i class="quote fa-solid fa-quote-right"></i>
+                    <p class="review">
+                        "Great communication, fast delivery and excellent code quality. I will definitely work with him again."
+                    </p>
+                    <div class="flex items-center gap-3 mt-4 pt-5">
+                        <img src="D:/Abdullah/assets/image/hana.png" class="review_image">
+                        <div>
+                            <h4 class="review_name">Sarah Khan</h4>
+                            <p class="text-[14px] text-gray-400">Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cardBg border border-gray-800/50 p-6 rounded-xl relative">
+                    <i class="quote fa-solid fa-quote-right"></i>
+                    <p class="review">
+                        "He understood my requirements perfectly and built a responsive website for my business. Highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-3 mt-4 pt-3">
+                        <img src="D:/Abdullah/assets/image/Nikolai-Ivanov.png" class="review_image">
+                        <div>
+                            <h4 class="review_name">Usman Ahmed</h4>
+                            <p class="text-[14px] text-gray-400">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="hireModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-black border border-gray-900 w-full max-w-2xl p-8 rounded-xl shadow-2xl relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto" id="modalContainer">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <form id="hireForm" action="#" method="POST" onsubmit="return validateForm(event)" class="space-y-6 text-left">
+                
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="name" id="name" required class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b border-gray-700 appearance-none focus:outline-none focus:ring-0 focus:border-formGreen peer" placeholder=" " />
+                    <label for="name" class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-formGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="email" name="email" id="email" required class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b border-gray-700 appearance-none focus:outline-none focus:ring-0 focus:border-formGreen peer" placeholder=" " />
+                    <label for="email" class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-formGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="tel" name="phone" id="phone" required class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b border-gray-700 appearance-none focus:outline-none focus:ring-0 focus:border-formGreen peer" placeholder=" " />
+                    <label for="phone" class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-formGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone Number</label>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="url" name="website" id="website" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b border-gray-700 appearance-none focus:outline-none focus:ring-0 focus:border-formGreen peer" placeholder=" " />
+                    <label for="website" class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-formGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Business Website</label>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group">
+                    <label class="block text-sm text-gray-400 mb-1">Monthly Budget</label>
+                    <select name="budget" class="block py-2.5 px-0 w-full text-sm text-white bg-black border-0 border-b border-gray-700 focus:outline-none focus:ring-0 focus:border-formGreen transition">
+                        <option value="less-1000">Less than $1,000</option>
+                        <option value="1000-5000">$1,000 - $5,000</option>
+                    </select>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-formGreen font-semibold text-sm tracking-wide">Services of Interest</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" name="services" value="seo" class="w-4 h-4 accent-formGreen bg-transparent border-gray-700 rounded">
+                            <span>Search Engine Optimization</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input type="checkbox" name="services" value="dev" class="w-4 h-4 accent-formGreen bg-transparent border-gray-700 rounded">
+                            <span>Website Development</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="relative z-0 w-full mb-5 group pt-2">
+                    <input type="text" name="additional_info" id="info" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b border-gray-700 appearance-none focus:outline-none focus:ring-0 focus:border-formGreen peer" placeholder=" " />
+                    <label for="info" class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-formGreen peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Additional Information You'd Like For Us To Know</label>
+                </div>
+
+                <div class="bg-[#f9f9f9] text-black p-3 rounded border border-gray-200 flex items-center justify-between max-w-[300px] my-4 select-none">
+                    <div class="flex items-center gap-3">
+                        <div onclick="handleCaptchaClick()" id="captchaBox" class="w-6 h-6 border-2 border-gray-300 rounded bg-white flex items-center justify-center cursor-pointer transition-all duration-200"></div>
+                        <span class="text-xs font-semibold text-gray-700 cursor-pointer" onclick="handleCaptchaClick()">I'm not a robot</span>
+                    </div>
+                    <div class="text-center text-[10px] text-gray-500">
+                        <i class="fa-solid fa-arrows-rotate text-blue-600 text-sm block"></i>
+                        reCAPTCHA
+                    </div>
+                </div>
+
+                <button type="submit" class="bg-formGreen hover:bg-green-400 text-black font-bold px-8 py-3 rounded-lg text-sm tracking-wide transition duration-200">
+                    Let's Talk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact" class="bg-darkBg py-12 px-6 md:px-20 border-t border-gray-900 text-center space-y-6">
+        <div>
+            <h4 class="About">Let's Work Together</h4>
+            <p class="project">Have a project in mind? Let's talk and build something amazing together.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto pt-4 text-xs">
+            <div class="bg-cardBg/60 border border-gray-800/40 p-4 rounded-lg flex items-center justify-center gap-3">
+                <i class="fa-solid fa-envelope text-accentBlue text-lg"></i>
+                <div class="text-left">
+                    <p class="work_text">Email</p>
+                    <p class="font-medium text-gray-200">wepabdullah36@gmail.com</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800/40 p-4 rounded-lg flex items-center justify-center gap-3">
+                <i class="fa-solid fa-phone text-accentBlue text-lg"></i>
+                <div class="text-left">
+                    <p class="work_text">Phone</p>
+                    <p class="font-medium text-gray-200">+92 340 4241597</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800/40 p-4 rounded-lg flex items-center justify-center gap-3">
+                <i class="fa-solid fa-location-dot text-accentBlue text-lg"></i>
+                <div class="text-left">
+                    <p class="work_text">Location</p>
+                    <p class="font-medium text-gray-200">Pakistan</p>
+                </div>
+            </div>
+            <div class="bg-cardBg/60 border border-gray-800/40 p-4 rounded-lg flex items-center justify-center gap-3">
+                <i class="fa-solid fa-briefcase text-accentBlue text-lg"></i>
+                <div class="text-left">
+                    <p class="work_text">Freelance Available</p>
+                    <p class="font-medium text-gray-200">Let's Work Together!</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-4 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+            <p>&copy; 2026 Abdullah Web Developer.</p>
+            <a href="#home" class="bg-cardBg border border-gray-800 w-8 h-8 rounded-full flex items-center justify-center hover:text-white hover:border-accentBlue transition"><i class="fa-solid fa-arrow-up text-xs"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('hireModal');
+        const container = document.getElementById('modalContainer');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        
+        let isCaptchaVerified = false;
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = "fa-solid fa-bars";
+            } else {
+                menuIcon.className = "fa-solid fa-xmark";
+            }
+        }
+
+        function openModal() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-95');
+            container.classList.add('scale-100');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) { closeModal(); }
+        }
+
+        function handleCaptchaClick() {
+            if (isCaptchaVerified) return;
+
+            const captchaBox = document.getElementById('captchaBox');
+            captchaBox.innerHTML = '<div class="captcha-spinner"></div>';
+
+            setTimeout(() => {
+                captchaBox.innerHTML = '<i class="fa-solid fa-check text-white text-sm"></i>';
+                captchaBox.className = "w-6 h-6 bg-[#1a73e8] border-none rounded flex items-center justify-center cursor-default transition-all duration-200";
+                isCaptchaVerified = true;
+            }, 1000);
+        }
+
+        function validateForm(event) {
+            if (!isCaptchaVerified) {
+                event.preventDefault();
+                alert("Please verify that you are not a robot by clicking the reCAPTCHA box.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+        function downloadAndOpenCV(event) {
+            event.preventDefault(); 
+
+            const cvUrl = 'D:/Abdullah/Digital_Marketing_CV.pdf'; 
+            const openLink = document.createElement('a');
+            openLink.href = cvUrl;
+            openLink.target = '_blank'; 
+            document.body.appendChild(openLink);
+            openLink.click();
+            document.body.removeChild(openLink);
+            setTimeout(() => {
+                const downloadLink = document.createElement('a');
+                downloadLink.href = cvUrl; 
+                downloadLink.download = 'Abdullah_Digital_Marketing_CV.pdf';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 500);
+        }
+    </script>
+</body>
+</html>
